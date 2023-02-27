@@ -1,0 +1,27 @@
+import React from "react";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from "@mui/icons-material/Search";
+import TextField from "@mui/material/TextField";
+import { Container } from "@mui/material";
+
+const Search = () => {
+
+    
+    return (
+       
+        <Container className="Search container">
+            <h1>Search</h1>
+           
+            <form>
+                <TextField id="search-bar" className="text"  /* onInput={(e) => {setSearchQuery(e.target.value);}} */
+                label="Search IThunder..." variant="outlined" placeholder="Search.." size="small"/>
+                <IconButton type="submit" aria-label="search">
+                <SearchIcon style={{ fill: "blue" }} />
+                </IconButton>
+            </form>
+        </Container>
+    
+    )
+}
+
+export default Search;
