@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import TextField from "@mui/material/TextField";
 import { Container } from "@mui/material";
 
-const Search = () => {
+const Search = ({ search, setSearch }) => {
 
     
     return (
@@ -13,8 +13,14 @@ const Search = () => {
             <h1>Search</h1>
            
             <form>
-                <TextField id="search-bar" className="text"  /* onInput={(e) => {setSearchQuery(e.target.value);}} */
-                label="Search IThunder..." variant="outlined" placeholder="Search.." size="small"/>
+                <TextField id="search-bar" className="text" 
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                label="Search IThunder..." 
+                variant="outlined"
+                placeholder="Search.." 
+                size="small"
+                />
                 <IconButton type="submit" aria-label="search">
                 <SearchIcon style={{ fill: "blue" }} />
                 </IconButton>
