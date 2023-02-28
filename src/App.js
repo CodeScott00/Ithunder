@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Card from "./components/Card.js";
 import Header from './components/Header';
 import Search from './components/Search.js';
 import Container from '@mui/material/Container';
+import CardDetail from './components/CardDetail.js';
 
 
 
@@ -38,7 +38,7 @@ useEffect(() => {
       <Header />
       <Search search={search} setSearch={setSearch} />
       
-      <Card music={music}/>
+      <CardDetail music={music}/>
 
       
       
