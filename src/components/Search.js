@@ -10,7 +10,7 @@ const Search = ({ search, setSearch }) => {
     return (
        
         <Container className="Search container">
-            <h1>Search</h1>
+            {/* <h1>Search</h1> */}
            
             <form>
                 <TextField id="search-bar" className="text" 
@@ -22,7 +22,7 @@ const Search = ({ search, setSearch }) => {
                 size="small"
                 />
                 <IconButton type="submit" aria-label="search">
-                <SearchIcon style={{ fill: "blue" }} />
+                <SearchIcon style={{ fill: "#ef0d33" }} />
                 </IconButton>
             </form>
         </Container>

@@ -14,13 +14,15 @@ const App = () => {
   const [music, setMusic] = useState([]) // holds music
   const [loading, setLoading] = useState(false)
 
-  const debouncedSearch = useDebounce(search, 500)
+  const debouncedSearch = useDebounce(search, 400)
 
 
 useEffect(() => {
   // search api
   async function fetchData() {
     setLoading(true);
+
+    // setMusic([]);
 
     const data = await fetch(
       `https://itunes.apple.com/search?term=${debouncedSearch}&entity=album&country=au` // check this later
@@ -37,12 +39,14 @@ useEffect(() => {
 }, [debouncedSearch])
 
   return (
-    <Container className='App'>
-      <h1>app container</h1>
+    <div>
+    {/* // <Container className='App'> */}
+      {/* <h1>app container</h1> */}
       <Header />
       <Search search={search} setSearch={setSearch} />
       <CardMusicList music={music}/>
-    </Container>
+    {/* // </Container> */}
+    </div>
   )
 }
 
