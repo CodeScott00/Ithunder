@@ -4,17 +4,18 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {  CardActionArea, IconButton } from '@mui/material';
+import Moment from 'moment';
 
 export default function CardListItem( { item }) {
     return(
         <div>
             <Card elevation={6} sx={{ maxWidth: 200 }} >
-            <CardActionArea href={item.collectionViewUrl}>
+            <CardActionArea href={item.collectionViewUrl} target={item.collectionViewUrl}>
                 <CardContent>
                     <CardMedia
                         component="img"
                         height="150"
-                        image={item.artworkUrl60}
+                        image={item.artworkUrl100}
                         title='Artist Name'
                         alt='album cover'
                     />
@@ -26,7 +27,7 @@ export default function CardListItem( { item }) {
                         Album: {item.collectionCensoredName}
                     </Typography> 
                     <Typography variant="body2" color="text.secondary">
-                     Released: {item.releaseDate}
+                     Released: {Moment(item.releaseDate).format('DD-MM-YYYY')}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                     Genre: {item.primaryGenreName}
