@@ -11,34 +11,54 @@ const CardDetail = ({ music }) => {
   
   
   return (
+
     
-    <Card  sx={{ maxWidth: 150 }}>
-      <h1>Card</h1>
-      <CardActionArea>
+  <Card  sx={{ maxWidth: 150 }}>
+    {/* <CardActionArea> =Often a card allow users to interact with the entirety of its surface to trigger its main action, be it an expansion, a link to another screen or some other behavior. The action area of the card can be specified by wrapping its contents in a CardActionArea component. */}
+      
+      {music.map(item => ( //mapping over elements and putting into card below
 
-        <CardMedia
-          component="img"
-          height="150"
-          image='https://via.placeholder.com/150.png'
-          alt="Artist"
-        />
+    <CardContent>
 
-        <CardContent>
+      {/* CARD IMAGE */}
+      <CardMedia
+        component="img"
+        height="150"
+        image={item.artworkUrl60}
+        title='Artist Name'
+        alt='album cover'
+      />
 
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
+        {/* CARD TEXT ARTIST*/}
+        <Typography gutterBottom variant="h5" component="div"> 
+          Artist: {item.artistName}
+        </Typography>
+        {/* <ol>Artist: {item.artistName}</ol> */}
 
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-          
-        </CardContent>
+        {/* CARD TEXT ALBUM*/}
+        <Typography variant="body2" color="text.secondary">
+          Album: {item.collectionCensoredName}
+        </Typography>   
+        {/* <ol>Album: {item.collectionCensoredName}</ol> */}
 
-      </CardActionArea>
-    </Card>
-  );
+        {/* CARD TEXT RELEASED     */}
+        <Typography variant="body2" color="text.secondary">
+          <ol>Released: {item.releaseDate}</ol>
+        </Typography>
+
+        {/* CARD TEXT GENRE */}
+        <Typography variant="body2" color="text.secondary">
+          <ol>Genre: {item.primaryGenreName}</ol>
+        </Typography>
+
+    </CardContent>
+      
+      
+    ))}
+    {/* </CardActionArea> */}
+  </Card>
+    );
+
 }
 
 export default CardDetail;

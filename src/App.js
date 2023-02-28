@@ -20,13 +20,13 @@ useEffect(() => {
     setLoading(true);
 
     const data = await fetch(
-      `https://itunes.apple.com/search?term=${search}&entity=album&country=au` //HERE
-      //'https://itunes.apple.com/gb/rss/topsongs/limit=20/json'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+      `https://itunes.apple.com/search?term=${search}&entity=album&country=au` // check this later
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
     ).then((result) => result.json());
     setMusic(data.results)
     setLoading(false)
     
-    console.log("data",data)
+    console.log("data",data)  //DEBUG
   }
   fetchData()
 }, [search])
@@ -37,8 +37,14 @@ useEffect(() => {
       <h1>app container</h1>
       <Header />
       <Search search={search} setSearch={setSearch} />
+      
       <Card music={music}/>
-      {JSON.stringify(music)}
+
+      
+      
+
+
+      {/* {JSON.stringify(music)} */}
     </div>
     </Container>
   )
