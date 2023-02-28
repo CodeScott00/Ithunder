@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {  CardActionArea, IconButton } from '@mui/material';
 
-export default function CardMusic( { item }) {
+export default function CardListItem( { item }) {
     return(
         <div>
             <Card elevation={6} sx={{ maxWidth: 200 }} >

@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Search from './components/Search.js';
 import Container from '@mui/material/Container';
-import CardDetail from './components/CardDetail.js';
+import CardMusicList from './components/CardMusicList.js';
 
 
 
@@ -38,7 +38,7 @@ useEffect(() => {
       <Header />
       <Search search={search} setSearch={setSearch} />
       
-      <CardDetail music={music}/>
+      <CardMusicList music={music}/>
 
       
       
