@@ -10,7 +10,7 @@ import useDebounce from './hooks/debounce';
 
 const App = () => {
 
-  const [search, setSearch] = useState([null]) // holds search
+  const [search, setSearch] = useState() // holds search
   const [music, setMusic] = useState([]) // holds music
   const [loading, setLoading] = useState(false)
 

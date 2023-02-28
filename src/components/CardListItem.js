@@ -7,9 +7,11 @@ import {  CardActionArea, IconButton } from '@mui/material';
 import Moment from 'moment';
 
 export default function CardListItem( { item }) {
+
+
     return(
         <div>
-            <Card elevation={6} sx={{ maxWidth: 200 }} >
+            <Card elevation={6} sx={{ minHeight: 300, maxWidth: 350, boxShadow: 10 }} >
             <CardActionArea href={item.collectionViewUrl} target={item.collectionViewUrl}>
                 <CardContent>
                     <CardMedia
