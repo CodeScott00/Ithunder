@@ -9,7 +9,7 @@ const Search = ({ search, setSearch }) => {
     
     return (
        
-        <Container className="Search container">
+        <Container className="Search container" >
             {/* <h1>Search</h1> */}
            
             <form>

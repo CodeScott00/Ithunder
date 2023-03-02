@@ -40,12 +40,12 @@ useEffect(() => {
 
   return (
     <div>
-    {/* // <Container className='App'> */}
+     {/* <Container className='App'> */}
       {/* <h1>app container</h1> */}
       <Header />
       <Search search={search} setSearch={setSearch} />
       <CardMusicList music={music}/>
-    {/* // </Container> */}
+     {/* </Container> */}
     </div>
   )
 }

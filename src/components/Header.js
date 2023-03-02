@@ -16,8 +16,14 @@ const Header = () => {
                     </Typography>
                     
                         <img src={itunesLogo}/>
-                        <img className="img" src={logoThunder} height="50px" width="75px"/>
-                        <img className="img" src={linkedinLogo}/>
+                        <a href="https://thunderlabs.com.au/" target="blank">
+                            <img className="img" src={logoThunder} height="50px" width="75px"/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/scott-dougal-software-developer/" target="blank">
+                            <img className="img" src={linkedinLogo} />
+                        </a>
+                   
+                   
                    
                     
                 </Toolbar>
