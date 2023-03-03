@@ -2,50 +2,37 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Search from './components/Search.js';
-import Container from '@mui/material/Container';
 import CardMusicList from './components/CardMusicList.js';
 import useDebounce from './hooks/debounce';
 
-
-
 const App = () => {
 
-  const [search, setSearch] = useState() // holds search
+  const [search, setSearch] = useState("") // holds search
   const [music, setMusic] = useState([]) // holds music
-  const [loading, setLoading] = useState(false)
-
+  
   const debouncedSearch = useDebounce(search, 400)
-
 
 useEffect(() => {
   // search api
   async function fetchData() {
-    setLoading(true);
-
-    // setMusic([]);
+    setMusic([]);
 
     const data = await fetch(
-      `https://itunes.apple.com/search?term=${debouncedSearch}&entity=album&country=au` // check this later
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+      `https://itunes.apple.com/search?term=${debouncedSearch}&entity=album&country=au`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
     ).then((result) => result.json());
     setMusic(data.results)
-    setLoading(false)
-    
     console.log("data",data)  //DEBUG
   }
-  if(debouncedSearch) {
-  fetchData()
-  }
+  if(debouncedSearch) 
+  fetchData();
+
 }, [debouncedSearch])
 
   return (
     <div>
-     {/* <Container className='App'> */}
-      {/* <h1>app container</h1> */}
       <Header />
       <Search search={search} setSearch={setSearch} />
       <CardMusicList music={music}/>
-     {/* </Container> */}
     </div>
   )
 }
