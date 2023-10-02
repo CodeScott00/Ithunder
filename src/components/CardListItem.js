@@ -20,12 +20,12 @@ const CardListItem = ({ item }) => {
                             title='Artist Name'
                             alt='album cover'
                         />
-                        <Typography gutterBottom variant="h7" component="div"> 
-                            Artist: {item.artistName}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="h8">
                             Album: {item.collectionCensoredName}
                         </Typography> 
+                        <Typography gutterBottom color="text.secondary" variant="h7" component="div"> 
+                            Artist: {item.artistName}
+                        </Typography>
                         <Typography variant="body2" color="text.secondary">
                             Released: {Moment(item.releaseDate).format('DD-MM-YYYY')}
                         </Typography>

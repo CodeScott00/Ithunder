@@ -13,7 +13,7 @@ const Search = ({ search, setSearch }) => {
                 <TextField id="search-bar" className="text" 
                     value={search}
                     onChange={e => setSearch(e.target.value)}
-                    label="Search IThunder..." 
+                    label="Search IDove..." 
                     variant="outlined"
                     placeholder="Search.." 
                     size="small"
