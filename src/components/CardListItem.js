@@ -7,7 +7,7 @@ import {  CardActionArea } from '@mui/material';
 import Moment from 'moment';
  
 const CardListItem = ({ item }) => {
-
+    console.log(item);
     return(
         <div>
             <Card elevation={6} sx={{ minHeight: 300, maxWidth: 350, boxShadow: 10 }} >

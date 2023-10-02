@@ -9,11 +9,13 @@ function useDebounce(value, delay) {
         const handler = setTimeout(() => {
             setDebouncedValue(value)
         }, delay)
+        console.log(value,"value");
 
         return () => {
             clearTimeout(handler)
         }
     }, [value, delay])
+    console.log(value,"value");
 
     return debouncedValue
 }

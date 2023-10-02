@@ -1,9 +1,8 @@
 import AppBar from '@mui/material/AppBar';
 import { Toolbar, Typography} from "@mui/material";
-import logoThunder from "../img/thunderlabs-logo.png";
-import linkedinLogo from "../img/linkedin-50.png";
-import itunesLogo from "../img/itunes-50.png";
-import dovetailLogo from "../img/dovetailLogo.png";
+import linkedinLogo from "../assets/linkedin-50.png";
+import itunesLogo from "../assets/itunes-50.png";
+import dovetailLogo from "../assets/dovetailLogo.png";
 
 const Header = () => {
 
